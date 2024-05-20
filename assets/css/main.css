@@ -1,0 +1,245 @@
+@import "./base.css";
+
+/*start header*/
+.header {
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.header .logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo img {
+  width: 35px;
+}
+
+.header .logo a {
+  color: var(--mainColor);
+}
+
+.header .nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header .nav a {
+  color: #101928;
+}
+
+.header .auth a {
+  font-family: var(--subFont);
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.header .auth a:first-of-type {
+  border: 1px solid var(--mainColor);
+  color: var(--mainColor);
+}
+
+.header .auth a:last-of-type {
+  background-color: var(--mainColor);
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  /*when the screen width is less than 992px 
+    apply the following*/
+  .nav {
+    display: none;
+  }
+}
+/*end header*/
+
+/*start testimonials section*/
+
+.testimonials {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.testimonials .row {
+  gap: 40px;
+}
+
+.testimonial {
+  width: calc((100% - 40px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 8.23719596862793px 8.23719596862793px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative; /*to use position absoulte
+  with its children*/
+}
+
+.testimonial ::after {
+  content: "";
+  border-top: 40px solid #f4f4f4;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.testimonial .user-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial .user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.testimonial .user-info .user-data {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.testimonial .user-info .user-data span {
+  font-size: 12px;
+  color: #969696;
+}
+
+.testimonial .rating {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.testimonial .rating img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.testimonial p{
+    text-align: left;
+    color: #646464;
+}
+
+
+/*end testimonials section*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*start footer*/
+.footer {
+  background-color: #393e46;
+  color: #fff;
+  padding: 50px 0; /*50px from top and bottom , zero from 
+    right and left*/
+}
+
+.footer a {
+  color: #fff;
+}
+
+/*create a gap between left and right sides, we used gap 
+becasue of the flex property*/
+.footer .row {
+  gap: 35px;
+}
+/*to put both sides beside each others considering the gap
+between both side which is 35px so it will not jump to a 
+new line*/
+.footer .footer-left-side,
+.footer .footer-right-side {
+  width: calc((100% - 35px) / 2);
+}
+
+.footer .footer-left-side {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer .footer-left-side .logo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.footer .footer-left-side .logo img {
+  width: 35px;
+}
+
+.footer .footer-left-side .logo a {
+  font-size: 14px;
+}
+
+.footer .footer-left-side p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.footer .footer-left-side .icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer .footer-left-side .icons img {
+  border: 1px solid #fff;
+  width: 15px;
+  height: 15px;
+  box-sizing: content-box; /*content-box used here
+    instead of border box because border-box causes
+    problems with svg when using padding*/
+  padding: 10px;
+}
+
+.footer .footer-right-side .row {
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.footer .footer-right-side .footer-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer .footer-right-side .footer-item ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/*end footer*/
